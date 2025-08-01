@@ -47,7 +47,9 @@ app.get('/leaderBoard', (req, res) => {
 app.use((req, res) => {
     res.status(404).render('error', {
         title: "Error - Page Not Found",
-        isLogedIn: req.isLogedIn
+        isLogedIn: req.isLogedIn,
+        status: 404,
+        message: "The page you are looking for does not exist."
     });
 });
 // ✅ Proper app.listen() is already here
