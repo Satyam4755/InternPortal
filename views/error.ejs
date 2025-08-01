@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Error <%= status %> - <%= message %></title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .error-container {
+      max-width: 500px;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .error-code {
+      font-size: 72px;
+      font-weight: bold;
+      color: #e63946;
+    }
+
+    .error-message {
+      font-size: 22px;
+      margin-top: 10px;
+    }
+
+    .home-link {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 20px;
+      background-color: #457b9d;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .home-link:hover {
+      background-color: #1d3557;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <div class="error-code"><%= status %></div>
+    <div class="error-message"><%= message %></div>
+    <a href="/" class="home-link">Go to Homepage</a>
+  </div>
+</body>
+</html>
