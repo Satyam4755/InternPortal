@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leaderboard</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Leaderboard</h2>
+    <ul class="leaderboard-list">
+      <% leaderboard.forEach(user => { %>
+        <li><strong><%= user.name %></strong> — ₹<%= user.donations %></li>
+      <% }) %>
+    </ul>
+    <a href="/dashboard" class="btn">← Back to Dashboard</a>
+  </div>
+</body>
+</html>
